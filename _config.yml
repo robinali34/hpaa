@@ -1,19 +1,16 @@
 # Site settings
 title: "HPAA - Hot Pot Astronomical Association"
-email: contact@hpaa.club
-description: >- # this means to ignore newlines until "baseurl:"
-  Hot Pot Astronomical Association (HPAA) is a Chinese astronomy enthusiasts 
-  organization in the San Francisco Bay Area. We enjoy astronomy and life under 
-  the dark California sky, looking up at the universe while enjoying hot pot below.
+email: "contact@hpaa.club"
+description: "Hot Pot Astronomical Association - Looking up at the universe while enjoying hot pot below"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://hpaa.club" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: hpaa_club
-github_username: hpaa-club
+twitter_username: "hpaa_club"
+github_username: "robinali34"
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
-permalink: /:title/
+permalink: /:year/:month/:day/:title/
 
 # Collections
 collections:
@@ -36,7 +33,7 @@ defaults:
     values:
       layout: "member"
 
-# GitHub Pages compatible plugins
+# Plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -53,8 +50,13 @@ exclude:
   - vendor/ruby/
   - README.md
   - .gitignore
+  - .github/
+  - jekyll-serve.sh
+  - preview.sh
+  - setup-github.sh
+  - DEPLOYMENT.md
 
-# Social media
+# Social media links
 social:
   - name: "Facebook"
     url: "https://facebook.com/hpaa.club"
@@ -65,6 +67,9 @@ social:
   - name: "Twitter"
     url: "https://twitter.com/hpaa_club"
     icon: "fab fa-twitter"
+  - name: "GitHub"
+    url: "https://github.com/robinali34/hpaa"
+    icon: "fab fa-github"
 
 # Navigation
 navigation:
@@ -74,26 +79,32 @@ navigation:
     url: "/#about"
   - title: "Members"
     url: "/#members"
-  - title: "Contact"
-    url: "/#contact"
   - title: "Blog"
-    url: "/blog/"
+    url: "/blog.html"
 
-# Site metadata
+# Author information
 author:
   name: "HPAA Team"
-  bio: "Hot Pot Astronomical Association"
+  email: "contact@hpaa.club"
   location: "San Francisco Bay Area, CA"
-  links:
-    - label: "Email"
-      icon: "fas fa-envelope"
-      url: "mailto:contact@hpaa.club"
+  bio: "Chinese astronomy enthusiasts organization"
 
-# GitHub Pages specific settings
+# Formspree ID for contact form
+formspree_id: "your-formspree-id-here"
+
+# GitHub Pages settings
 github:
   is_project_page: false
-  repository_url: "https://github.com/hpaa-club/hpaa-website"
+  repository_url: "https://github.com/robinali34/hpaa"
 
-# SEO settings
-lang: en_US
-locale: en_US 
+# Language and locale settings
+lang: "zh-CN"
+locale: "zh_CN"
+
+# Jekyll and GitHub Pages versions (compatible with Ruby 2.7)
+jekyll: ~> 4.2.0
+github-pages: ~> 228
+
+# HTTPS settings
+force_ssl: true
+secure_headers: true 

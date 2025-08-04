@@ -1,0 +1,23 @@
+# Security Headers Configuration for HPAA Website
+# These headers will be applied by GitHub Pages or your web server
+
+# Content Security Policy
+Content-Security-Policy: "default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:; font-src 'self' https: data:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'; connect-src 'self' https:; frame-src 'none'; object-src 'none';"
+
+# HTTPS and Security Headers
+Strict-Transport-Security: "max-age=31536000; includeSubDomains; preload"
+X-Content-Type-Options: "nosniff"
+X-Frame-Options: "DENY"
+X-XSS-Protection: "1; mode=block"
+Referrer-Policy: "strict-origin-when-cross-origin"
+Permissions-Policy: "geolocation=(), microphone=(), camera=()"
+
+# Additional Security
+X-Download-Options: "noopen"
+X-Permitted-Cross-Domain-Policies: "none"
+Cross-Origin-Embedder-Policy: "require-corp"
+Cross-Origin-Opener-Policy: "same-origin"
+Cross-Origin-Resource-Policy: "same-origin"
+
+# Cache Control for Static Assets
+Cache-Control: "public, max-age=31536000, immutable" 

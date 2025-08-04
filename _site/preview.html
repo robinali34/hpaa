@@ -4,10 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Language" content="zh-CN, en">
+    
+    <!-- HTTPS Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="upgrade-insecure-requests" content="1">
+    
     <title>HPAA - Hot Pot Astronomical Association | 火锅天文协会</title>
+    
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
     <link rel="stylesheet" href="assets/css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- Open Graph with HTTPS -->
+    <meta property="og:url" content="https://hpaa.club">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="HPAA - Hot Pot Astronomical Association">
+    <meta property="og:description" content="Hot Pot Astronomical Association - Looking up at the universe while enjoying hot pot below">
+    <meta property="og:image" content="https://hpaa.club/assets/images/og-image.jpg">
+    <meta property="og:image:secure_url" content="https://hpaa.club/assets/images/og-image.jpg">
+    
+    <!-- Twitter Card with HTTPS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@hpaa_club">
+    <meta name="twitter:title" content="HPAA - Hot Pot Astronomical Association">
+    <meta name="twitter:description" content="Hot Pot Astronomical Association - Looking up at the universe while enjoying hot pot below">
+    <meta name="twitter:image" content="https://hpaa.club/assets/images/twitter-card.jpg">
+    
     <style>
         /* Chinese font support */
         .chinese-text {
@@ -173,9 +207,10 @@
                 <div class="footer-section">
                     <h4>Connect</h4>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://facebook.com/hpaa.club" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                        <a href="https://instagram.com/hpaa.club" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/hpaa_club" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/robinali34/hpaa" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
             </div>
@@ -186,5 +221,27 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "HPAA - Hot Pot Astronomical Association",
+        "url": "https://hpaa.club",
+        "logo": "https://hpaa.club/assets/images/logo.png",
+        "description": "Hot Pot Astronomical Association - Looking up at the universe while enjoying hot pot below",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "San Francisco Bay Area",
+            "addressRegion": "CA",
+            "addressCountry": "US"
+        },
+        "sameAs": [
+            "https://github.com/robinali34/hpaa",
+            "https://twitter.com/hpaa_club"
+        ]
+    }
+    </script>
 </body>
 </html> 
