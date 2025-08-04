@@ -4,13 +4,15 @@
             <div class="footer-section">
                 <h3>HPAA</h3>
                 <p>Hot Pot Astronomical Association</p>
-                <p>火锅天文协会</p>
+                <p class="chinese-text">火锅天文协会</p>
             </div>
             <div class="footer-section">
                 <h4>Quick Links</h4>
                 <ul>
                     {% for item in site.navigation %}
+                    {% if item.title != "Contact" %}
                     <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+                    {% endif %}
                     {% endfor %}
                 </ul>
             </div>

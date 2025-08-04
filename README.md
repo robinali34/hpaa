@@ -19,94 +19,115 @@ The name 'hot pot' originates from 2017 CalStar in Whisper Canyon, where we cook
 - **Contact Form**: Interactive contact form with Formspree integration
 - **Member Showcase**: Dynamic member profiles from YAML data files
 - **Accessibility**: Semantic HTML and keyboard navigation support
+- **Chinese Language Support**: Full support for Chinese characters with Noto Sans SC font
+- **GitHub Pages Ready**: Optimized for hosting on GitHub Pages
+
+## 🚀 Quick Start
+
+### Option 1: Jekyll Development Server (Recommended)
+
+```bash
+# Start Jekyll development server
+./jekyll-serve.sh
+```
+
+Then open: **http://localhost:4000**
+
+### Option 2: Manual Jekyll Setup
+
+```bash
+# Install dependencies
+bundle install
+
+# Start Jekyll server
+bundle exec jekyll serve --port 4000
+```
+
+### Option 3: Simple HTTP Server (Fallback)
+
+```bash
+# Start simple server
+./preview.sh
+```
+
+Then open: **http://localhost:8080**
 
 ## 🚀 Technologies Used
 
-- **Jekyll 4.3+**: Static site generator
+- **Jekyll 4.2+**: Static site generator
 - **Liquid**: Templating language
 - **HTML5**: Semantic markup structure
 - **CSS3**: Modern styling with Flexbox and Grid
 - **JavaScript (ES6+)**: Interactive functionality and animations
 - **Font Awesome**: Icons for visual elements
-- **Google Fonts**: Inter font family for typography
+- **Google Fonts**: Inter + Noto Sans SC (Chinese support)
 - **Formspree**: Contact form handling
+- **GitHub Pages**: Hosting platform
 
 ## 📁 Project Structure
 
 ```
 hpaa/
-├── _config.yml           # Jekyll configuration
+├── .github/workflows/
+│   └── deploy.yml          # GitHub Actions workflow
+├── _config.yml             # Jekyll configuration
 ├── _data/
-│   └── members.yml       # Member data
+│   └── members.yml         # Member data
 ├── _includes/
-│   ├── header.html       # Site header
-│   └── footer.html       # Site footer
+│   ├── header.html         # Site header
+│   └── footer.html         # Site footer
 ├── _layouts/
-│   ├── default.html      # Main layout
-│   └── post.html         # Blog post layout
+│   ├── default.html        # Main layout
+│   └── post.html           # Blog post layout
 ├── _posts/
 │   └── 2024-01-15-welcome-to-hpaa.md  # Sample blog post
+├── _site/                  # Generated site (Jekyll output)
 ├── assets/
-│   ├── css/
-│   │   └── main.css      # Main stylesheet
-│   └── js/
-│       └── main.js       # JavaScript functionality
-├── index.html            # Homepage
-├── blog.html             # Blog index page
-├── Gemfile               # Ruby dependencies
-└── README.md             # Project documentation
+│   ├── css/main.css        # Main stylesheet
+│   └── js/main.js          # JavaScript functionality
+├── index.html              # Homepage (Jekyll)
+├── blog.html               # Blog index page
+├── preview.html            # Static preview (fallback)
+├── Gemfile                 # Ruby dependencies
+├── jekyll-serve.sh         # Jekyll server script
+├── preview.sh              # Simple server script
+├── setup-github.sh         # GitHub setup script
+├── DEPLOYMENT.md           # Deployment guide
+└── README.md               # Project documentation
 ```
 
-## 🛠️ Setup Instructions
+## 🛠️ Development
 
 ### Prerequisites
 - Ruby 2.7+ (for Jekyll)
-- RubyGems
+- Bundler
 - A modern web browser
 
 ### Local Development
 
-1. **Clone or download the project files**
+1. **Clone the repository**
    ```bash
    git clone <repository-url>
    cd hpaa
    ```
 
-2. **Install Jekyll and dependencies**
+2. **Start Jekyll development server**
    ```bash
-   # Install Jekyll (if not already installed)
-   gem install jekyll bundler
-   
-   # Install project dependencies
-   bundle install
+   ./jekyll-serve.sh
    ```
 
-3. **Run the development server**
-   ```bash
-   # Using Jekyll directly
-   jekyll serve
-   
-   # Or using Bundler (recommended)
-   bundle exec jekyll serve
-   ```
-
-4. **Access the website**
+3. **Access the website**
    - Navigate to `http://localhost:4000`
    - The site will automatically reload when you make changes
 
-### Alternative Setup (without Jekyll installation)
+### Jekyll Features
 
-If you don't want to install Jekyll locally, you can:
-
-1. **Use GitHub Pages** (recommended)
-   - Push the code to a GitHub repository
-   - Enable GitHub Pages in repository settings
-   - The site will be built automatically
-
-2. **Use Netlify**
-   - Connect your Git repository to Netlify
-   - Set build command: `jekyll build`
-   - Set publish directory: `_site`
+✅ **Dynamic Content**: Members loaded from `_data/members.yml`
+✅ **Blog System**: Posts in `_posts/` with automatic RSS feed
+✅ **SEO Optimization**: Automatic meta tags and sitemap
+✅ **Chinese Support**: Proper font rendering for Chinese characters
+✅ **Hot Reload**: Automatic page refresh on changes
+✅ **Responsive Design**: Works on all device sizes
 
 ## 🎨 Design Features
 
@@ -116,7 +137,8 @@ If you don't want to install Jekyll locally, you can:
 - **Accent**: White and light gray - For text and highlights
 
 ### Typography
-- **Font Family**: Inter (Google Fonts)
+- **English**: Inter font family
+- **Chinese**: Noto Sans SC font family
 - **Weights**: 300, 400, 500, 600, 700
 - **Languages**: English and Chinese (Simplified)
 
@@ -180,7 +202,7 @@ Edit `_config.yml` to change:
 ### GitHub Pages (Recommended)
 1. Push your code to a GitHub repository
 2. Go to repository Settings > Pages
-3. Select source branch (usually `main`)
+3. Select source branch (usually `gh-pages`)
 4. Your site will be available at `https://username.github.io/repository-name`
 
 ### Netlify
@@ -195,7 +217,7 @@ Edit `_config.yml` to change:
 3. Follow the prompts
 
 ### Traditional Web Hosting
-1. Build the site: `jekyll build`
+1. Build the site: `bundle exec jekyll build`
 2. Upload the `_site` folder contents to your web server
 
 ### Custom Domain
@@ -233,6 +255,14 @@ This site uses the following Jekyll plugins:
 - **jekyll-seo-tag**: Adds SEO meta tags
 - **jekyll-sitemap**: Generates XML sitemap
 
+## 🇨🇳 Chinese Language Support
+
+The website includes full Chinese language support:
+- **Font**: Noto Sans SC for proper Chinese character rendering
+- **Encoding**: UTF-8 for correct character display
+- **Content**: Bilingual English and Chinese text
+- **Meta tags**: Proper language attributes
+
 ## 🐛 Browser Support
 
 - Chrome 60+
@@ -250,7 +280,7 @@ For HPAA members who want to contribute:
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
-4. Test locally with `bundle exec jekyll serve`
+4. Test locally with `./jekyll-serve.sh`
 5. Submit a pull request
 
 ## 📞 Support

@@ -6,7 +6,9 @@
             </div>
             <ul class="nav-menu">
                 {% for item in site.navigation %}
+                {% if item.title != "Contact" %}
                 <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+                {% endif %}
                 {% endfor %}
             </ul>
             <div class="hamburger">
