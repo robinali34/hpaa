@@ -1,0 +1,32 @@
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>HPAA</h3>
+                <p>Hot Pot Astronomical Association</p>
+                <p>火锅天文协会</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    {% for item in site.navigation %}
+                    <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    {% for social in site.social %}
+                    <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer">
+                        <i class="{{ social.icon }}"></i>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; {{ 'now' | date: "%Y" }} HPAA. All rights reserved.</p>
+        </div>
+    </div>
+</footer> 

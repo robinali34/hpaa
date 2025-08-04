@@ -1,0 +1,29 @@
+- name: "Kai Yang"
+  description: "Astronomy Enthusiast"
+  icon: "fas fa-user-astronaut"
+  website: ""
+
+- name: "Sahara Yang"
+  description: "Astronomy Enthusiast"
+  icon: "fas fa-user-astronaut"
+  website: ""
+
+- name: "Yanzhe Liu"
+  description: "Astronomy Enthusiast"
+  icon: "fas fa-user-astronaut"
+  website: ""
+
+- name: "JJJ"
+  description: "Astronomy Enthusiast"
+  icon: "fas fa-user-astronaut"
+  website: ""
+
+- name: "Tracy"
+  description: "Universe Thru Lens"
+  icon: "fas fa-camera"
+  website: ""
+
+- name: "Yitao Liu"
+  description: "Astronomy Enthusiast"
+  icon: "fas fa-user-astronaut"
+  website: "" 

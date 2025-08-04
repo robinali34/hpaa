@@ -1,0 +1,99 @@
+# Site settings
+title: "HPAA - Hot Pot Astronomical Association"
+email: contact@hpaa.club
+description: >- # this means to ignore newlines until "baseurl:"
+  Hot Pot Astronomical Association (HPAA) is a Chinese astronomy enthusiasts 
+  organization in the San Francisco Bay Area. We enjoy astronomy and life under 
+  the dark California sky, looking up at the universe while enjoying hot pot below.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://hpaa.club" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: hpaa_club
+github_username: hpaa-club
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+
+# Collections
+collections:
+  members:
+    output: true
+    permalink: /members/:name/
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "members"
+    values:
+      layout: "member"
+
+# GitHub Pages compatible plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - .gitignore
+
+# Social media
+social:
+  - name: "Facebook"
+    url: "https://facebook.com/hpaa.club"
+    icon: "fab fa-facebook"
+  - name: "Instagram"
+    url: "https://instagram.com/hpaa.club"
+    icon: "fab fa-instagram"
+  - name: "Twitter"
+    url: "https://twitter.com/hpaa_club"
+    icon: "fab fa-twitter"
+
+# Navigation
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "About"
+    url: "/#about"
+  - title: "Members"
+    url: "/#members"
+  - title: "Contact"
+    url: "/#contact"
+  - title: "Blog"
+    url: "/blog/"
+
+# Site metadata
+author:
+  name: "HPAA Team"
+  bio: "Hot Pot Astronomical Association"
+  location: "San Francisco Bay Area, CA"
+  links:
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:contact@hpaa.club"
+
+# GitHub Pages specific settings
+github:
+  is_project_page: false
+  repository_url: "https://github.com/hpaa-club/hpaa-website"
+
+# SEO settings
+lang: en_US
+locale: en_US 

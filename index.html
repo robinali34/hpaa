@@ -1,0 +1,125 @@
+---
+layout: default
+title: Home
+description: Hot Pot Astronomical Association - Looking up at the universe while enjoying hot pot below
+---
+
+<section id="home" class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1 class="hero-title">Hot Pot Astronomical Association</h1>
+            <p class="hero-subtitle">火锅天文协会</p>
+            <p class="hero-description">
+                The universe was born in a hot dense soup, and we believe the sky with all kinds of galaxies/nebulae/stars is just like the hot pot with different food inside.
+            </p>
+            <div class="hero-buttons">
+                <a href="#about" class="btn btn-primary">Learn More</a>
+                <a href="#members" class="btn btn-secondary">Meet Our Members</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="astronomy-visual">
+                <div class="stars"></div>
+                <div class="hot-pot"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <div class="container">
+        <div class="section-header">
+            <h2>About HPAA</h2>
+            <p>Our Story</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>The Origin of Our Name</h3>
+                <p>
+                    The name 'hot pot' originates from 2017 CalStar in Whisper Canyon, where we cooked Chinese hot pot under the stars. The universe was born in a hot dense soup, and we believe the sky with all kinds of galaxies/nebulae/stars is just like the hot pot with different food inside. We came to the idea of naming our club as 'Hot Pot Astronomical Association' (HPAA).
+                </p>
+                <h3>Our Mission</h3>
+                <p>
+                    火锅天文协会(HPAA)，是旧金山湾区的一个华人天文爱好者组织。宇宙诞生于一团热汤之中，就好像我们的火锅。我们在加州黑暗的天空下，抬头看宇宙，低头吃火锅，享受天文，享受生活。
+                </p>
+                <p>
+                    HPAA is a Chinese astronomy enthusiasts organization in the San Francisco Bay Area. We enjoy astronomy and life under the dark California sky, looking up at the universe while enjoying hot pot below.
+                </p>
+            </div>
+            <div class="about-image">
+                <div class="image-placeholder">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-fire"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="members" class="members">
+    <div class="container">
+        <div class="section-header">
+            <h2>HPAA Members</h2>
+            <p>Personal Websites</p>
+        </div>
+        <div class="members-grid">
+            {% for member in site.members %}
+            <div class="member-card">
+                <div class="member-avatar">
+                    <i class="{{ member.icon | default: 'fas fa-user-astronaut' }}"></i>
+                </div>
+                <h3>{{ member.name }}</h3>
+                <p>{{ member.description | default: 'Astronomy Enthusiast' }}</p>
+                {% if member.website %}
+                <a href="{{ member.website }}" class="member-link" target="_blank" rel="noopener noreferrer">Visit Website</a>
+                {% else %}
+                <span class="member-link">Coming Soon</span>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="section-header">
+            <h2>Join Us</h2>
+            <p>Connect with HPAA</p>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Get Involved</h3>
+                <p>Join our community of astronomy enthusiasts in the San Francisco Bay Area. Experience the wonders of the universe while enjoying the warmth of hot pot and good company.</p>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>{{ site.author.location }}</span>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Regular stargazing events</span>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-users"></i>
+                        <span>Chinese astronomy community</span>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form action="https://formspree.io/f/{{ site.formspree_id }}" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section> 
