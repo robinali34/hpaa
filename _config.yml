@@ -56,21 +56,6 @@ exclude:
   - setup-github.sh
   - DEPLOYMENT.md
 
-# Social media links
-social:
-  - name: "Facebook"
-    url: "https://facebook.com/hpaa.club"
-    icon: "fab fa-facebook"
-  - name: "Instagram"
-    url: "https://instagram.com/hpaa.club"
-    icon: "fab fa-instagram"
-  - name: "Twitter"
-    url: "https://twitter.com/hpaa_club"
-    icon: "fab fa-twitter"
-  - name: "GitHub"
-    url: "https://github.com/robinali34/hpaa"
-    icon: "fab fa-github"
-
 # Navigation
 navigation:
   - title: "Home"
