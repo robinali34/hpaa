@@ -60,27 +60,68 @@ hpaa/
 │   └── js/main.js       # JavaScript
 ├── index.html           # Homepage
 ├── blog.html            # Blog index
-├── CNAME                # Custom domain
 └── README.md            # This file
 ```
 
 ## 🌐 Deployment
 
-### GitHub Pages (Recommended)
+### GitHub Pages (Currently Active)
 1. **Repository**: https://github.com/robinali34/hpaa
-2. **Live Site**: https://hpaa.club (once DNS is configured)
-3. **GitHub Pages**: https://robinali34.github.io/hpaa
+2. **Live Site**: https://robinali34.github.io/hpaa
+3. **Status**: ✅ Working with HTTPS
 
 ### Setup GitHub Pages
 1. Go to repository Settings → Pages
 2. Source: Deploy from a branch
 3. Branch: `main` → `/ (root)`
-4. Save
+4. **Important**: Remove any custom domain configuration for now
+5. Save
 
-### Custom Domain
-- Domain: `hpaa.club`
-- CNAME file already configured
-- Update DNS records to point to `robinali34.github.io`
+### Custom Domain Setup (Future)
+To use `www.hpaa.club`:
+
+1. **Configure DNS Records** with your domain provider:
+   ```
+   Type: CNAME
+   Name: www
+   Value: robinali34.github.io
+   TTL: 3600
+   
+   Type: A
+   Name: @ (or leave blank)
+   Value: 185.199.108.153
+   TTL: 3600
+   
+   Type: A
+   Name: @ (or leave blank)
+   Value: 185.199.109.153
+   TTL: 3600
+   
+   Type: A
+   Name: @ (or leave blank)
+   Value: 185.199.110.153
+   TTL: 3600
+   
+   Type: A
+   Name: @ (or leave blank)
+   Value: 185.199.111.153
+   TTL: 3600
+   ```
+
+2. **Wait for DNS propagation** (24-48 hours)
+
+3. **Add CNAME file** to repository:
+   ```bash
+   echo "www.hpaa.club" > CNAME
+   git add CNAME
+   git commit -m "Add custom domain"
+   git push
+   ```
+
+4. **Configure GitHub Pages**:
+   - Go to Settings → Pages
+   - Add custom domain: `www.hpaa.club`
+   - Check "Enforce HTTPS"
 
 ## 📝 Adding Content
 
