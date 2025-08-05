@@ -65,7 +65,7 @@ navigation:
   - title: "Members"
     url: "/#members"
   - title: "Gallery"
-    url: "/gallery.html"
+    url: "/gallery/"
   - title: "Blog"
     url: "/blog.html"
 
